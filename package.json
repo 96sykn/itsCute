@@ -1,8 +1,8 @@
 {
   "name": "itsCute",
-  "displayName": "ItsCute",
+  "displayName": "It's Cute.",
   "description": "A cute comment adder extension",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "96yuki",
   "engines": {
     "vscode": "^1.95.0"
@@ -26,7 +26,22 @@
         "mac": "cmd+alt+a",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "itsCute.cuteText": {
+          "type": "string",
+          "default": "かに",
+          "description": "出現するかわいいの名前を変更します。"
+        },
+        "itsCute.cuteEmoji": {
+          "type": "string",
+          "default": "🦀",
+          "description": "出現するかわいいを変更します。"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -46,5 +61,9 @@
     "typescript": "^5.6.3",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/96sykn/itsCute.git"
   }
 }

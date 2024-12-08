@@ -1,9 +1,10 @@
-# Change Log
+## Changelog
 
-All notable changes to the "itsCute" extension will be documented in this file.
+### v0.0.3(2024-12-09)
+-LICENSE,README,CHANGELOGの整備
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### v0.0.2 (2024-12-09)
+- 出現するキャラクターの設定を変更可能に
 
-## [Unreleased]
-
-- Initial release
+### v0.0.1 (2024-12-09)
+- 初回リリース

@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 // 拡張機能の実行部分
 export function activate(context: vscode.ExtensionContext) {
 
-    console.log('Congratulations, your extension "ItsCute" is now active!');
+    console.log('Congratulations, your extension "It\'s Cute." is now active!');
 
     // コマンドの定義
     let disposable = vscode.commands.registerCommand('itscute.addComment', () => {
@@ -14,30 +14,35 @@ export function activate(context: vscode.ExtensionContext) {
             // 現在編集中のテキストの言語モードを取得
             const languageId = editor.document.languageId;
 
+
+            const config = vscode.workspace.getConfiguration('itsCute');
+            const cuteText = config.get('cuteText', 'かに'); // デフォルトは「かに」
+            const cuteEmoji = config.get('cuteEmoji', '🦀'); // デフォルトは「🦀」
+
             // 挿入するコメントの文字列
             const commentText = `
-︎
-︎
-︎
-︎
-︎
-︎
-︎
-︎
-					お使いの端末から
-					かに が検出されました
 
-︎						₍₍⁽⁽🦀₎₎⁾⁾
+
+
+
+
+
+
+
+					作成中のプログラムに
+					${cuteText} が出現しました
+
+						₍₍⁽⁽${cuteEmoji}₎₎⁾⁾
 
 					かわいいですね
 
-︎
-︎
-︎
-︎
-︎
-︎
-︎
+
+
+
+
+
+
+
 `;
 
             // 言語によってコメントアウトのスタイルを決定
